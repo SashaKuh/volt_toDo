@@ -2,6 +2,7 @@
   "name": "volt",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/SashaKuh/volt_toDo",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
@@ -19,12 +20,15 @@
   "devDependencies": {
     "@babel/runtime": "^7.13.8",
     "@wemake-services/eslint-config-javascript": "^2.1.1",
+    "gh-pages": "^6.1.1",
     "typescript": "^4.1.3"
   },
   "extends": [
     "@wemake-services/javascript"
   ],
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
